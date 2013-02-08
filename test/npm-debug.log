@@ -1,0 +1,36 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/0.8.14/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'ejs' ]
+2 info using npm@1.1.65
+3 info using node@v0.8.14
+4 verbose read json /Users/yellowsunhy/Desktop/node.js/test/package.json
+5 verbose read json /Users/yellowsunhy/Desktop/node.js/test/package.json
+6 verbose cache add [ 'ejs', null ]
+7 silly cache add name=undefined spec="ejs" args=["ejs",null]
+8 verbose parsed url { pathname: 'ejs', path: 'ejs', href: 'ejs' }
+9 silly lockFile 75eeca8f-ejs ejs
+10 verbose lock ejs /Users/yellowsunhy/.npm/75eeca8f-ejs.lock
+11 silly lockFile 75eeca8f-ejs ejs
+12 verbose addNamed [ 'ejs', '' ]
+13 verbose addNamed [ null, '' ]
+14 silly lockFile bcdf6e5f-ejs ejs@
+15 verbose lock ejs@ /Users/yellowsunhy/.npm/bcdf6e5f-ejs.lock
+16 silly lockFile bcdf6e5f-ejs ejs@
+17 error Error: EACCES, open '/Users/yellowsunhy/.npm/bcdf6e5f-ejs.lock'
+17 error  { [Error: EACCES, open '/Users/yellowsunhy/.npm/bcdf6e5f-ejs.lock']
+17 error   errno: 3,
+17 error   code: 'EACCES',
+17 error   path: '/Users/yellowsunhy/.npm/bcdf6e5f-ejs.lock' }
+18 error Please try running this command again as root/Administrator.
+19 error System Darwin 12.2.1
+20 error command "/usr/local/Cellar/node/0.8.14/bin/node" "/usr/local/bin/npm" "install" "ejs"
+21 error cwd /Users/yellowsunhy/Desktop/node.js/test
+22 error node -v v0.8.14
+23 error npm -v 1.1.65
+24 error path /Users/yellowsunhy/.npm/bcdf6e5f-ejs.lock
+25 error code EACCES
+26 error errno 3
+27 error stack Error: EACCES, open '/Users/yellowsunhy/.npm/bcdf6e5f-ejs.lock'
+28 verbose exit [ 3, true ]
