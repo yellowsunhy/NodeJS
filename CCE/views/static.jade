@@ -1,0 +1,39 @@
+extends layout
+
+block menu
+	.menu_bar.shadow
+		.menu_logo #{title}
+		each menu in menus
+			- if(menu=='登陆')
+				#login.menu #{menu}
+			-else
+				.menu #{menu}
+
+block footer
+	.footer
+		.footer_content
+			.about_us.footer_column
+				li.title About Us
+				li barbarbar
+				li foofoofoo
+				li bazbazbaz
+				li quxquxqux
+			.feedback.footer_column
+				li.title Feedback
+				li barbarbar
+				li foofoofoo
+				li bazbazbaz
+				li quxquxqux
+			.social.footer_column
+				li.title Follow Us
+				li sina
+				li renren
+				li facebook
+				li twitter
+			.rights
+				li Terms of Use
+				li Privacy Policy
+				li Site Map
+				li Get Support
+				li Contact Us
+				li.rights_content Copyright ©2013 Career Engine, Inc. All Rights Reserved.

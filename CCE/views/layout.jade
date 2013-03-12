@@ -1,0 +1,41 @@
+!!! 5
+//if lt IE 8
+  <html class="no-js ie6 oldie" lang="en"> 
+//if IE 7
+  <html class="no-js ie7 oldie" lang="en">
+//if IE 8
+  <html class="no-js ie8 oldie" lang="en">
+//if gt IE 8
+  <!--> <html class="no-js" lang="en"> <!--
+html
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible",
+    content="IE=edge,chrome=1")
+
+    title= title
+    meta(name="description", content="#{description}")
+    meta(name="author", content="#{author}")
+    meta(name="viewport", content="width=device-width,initial-scale=1") 
+    <!-- Bootstrap -->
+    //link(rel='stylesheet', media="screen", href='/stylesheets/bootstrap.min.css')
+    //link(rel='stylesheet', media="screen", href='/stylesheets/bootstrap-responsive.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    // libs
+    script(src="javascripts/libs/jquery-1.9.1.js")
+    script(src="javascripts/libs/modernizr-2.6.2.js")
+    script(src="javascripts/libs/underscore-1.4.4.js")
+    script(src="javascripts/libs/backbone-0.9.10.js")
+    //script(src="javascripts/libs/bootstrap.js")    
+
+    // plugins
+    script(src="javascripts/plugins/jquery.mrsun.ui.js")
+    // main
+    script(defer, src="javascripts/global.js")
+    script(defer, src="javascripts/bb_global.js")
+
+  body
+    block menu
+    block content
+    block footer
+</html>

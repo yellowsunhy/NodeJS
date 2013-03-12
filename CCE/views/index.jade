@@ -1,0 +1,20 @@
+extends static
+
+block content
+  .search_holder
+    .search_bar_bg
+      .search_bar
+        <label>找个工作看看？</label>
+        <input id="search_box" class="corner" type="text" placeHolder="Companies, Jobs, Locations ..."/>
+      .recent_jobs_holder.big_corner.shadow
+        span.hot_jobs 热门工作推荐
+        .jobs
+
+
+  // Templates
+  script#job-template(type="text/template")
+    <div class="job">
+    .job-name <%= JobName %>
+    .company-name <%= CompanyName %>
+
+    </div>
