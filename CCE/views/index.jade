@@ -1,15 +1,36 @@
 extends static
 
 block content
-  .search_holder
-    .search_bar_bg
-      .search_bar
-        <label>找个工作看看？</label>
-        <input id="search_box" class="corner" type="text" placeHolder="Companies, Jobs, Locations ..."/>
-      .recent_jobs_holder.big_corner.shadow
-        span.hot_jobs 热门工作推荐
-        .jobs
+  #carousel.carousel.slide
+    .carousel-inner
+      each slide,i in slides
+        if i === 0
+          .item.active
+            img(src="#{slide.url}",alt="")
+            .container
+              .carousel-caption
+                h1 #{slide.headline}
+                p.lead #{slide.description}
+        else
+          .item
+            img(src="#{slide.url}",alt="")
+            .container
+              .carousel-caption
+                h1 #{slide.headline}
+                p.lead #{slide.description}
+    a.left.carousel-control(href="#carousel",data-slide="prev") ‹
+    a.right.carousel-control(href="#carousel",data-slide="next") ›
 
+  .container
+    .row
+      #recent-activity.span6 Recent Activity<br/>Recent Activity<br/>Recent Activity<br/>Recent Activity<br/>Recent Activity<br/>Recent Activity<br/>
+
+      #recent-news.span6 Recent News<br/>Recent News<br/>Recent News<br/>Recent News<br/>Recent News<br/>Recent News<br/>Recent News<br/>
+    hr
+
+  #top-company.container.hero-unit Company Logo<br/>Company Logo<br/>Company Logo<br/>Company Logo<br/>Company Logo<br/>Company Logo<br/>
+
+  #blank.container
 
   // Templates
   script#job-template(type="text/template")

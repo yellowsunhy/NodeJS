@@ -1,39 +1,33 @@
 extends layout
 
 block menu
-	.menu_bar.shadow
-		.menu_logo #{title}
-		each menu in menus
-			- if(menu=='登陆')
-				#login.menu #{menu}
-			-else
-				.menu #{menu}
+	#top_nav_bar.navbar
+		.menu_bar
+			.container
+				a.menu_logo.brand(href="/")
+					img(src="images/logo.png",width="205px")
+				ul.nav.pull-right
+					each menu in menus
+						li.menu_item(id="#{(menu.id)==undefined?"":menu.id}")
+							a(data-toggle="#{(menu.submenus==undefined)?"":"dropdown"}") #{menu.name}
+								span(class="#{(menu.submenus==undefined)?"":"caret"}")
+							- if (menu.submenus != undefined)
+								ul.dropdown-menu.pull-left
+									- each sub in menu.submenus
+										li
+											a #{sub}
+
 
 block footer
-	.footer
-		.footer_content
-			.about_us.footer_column
-				li.title About Us
-				li barbarbar
-				li foofoofoo
-				li bazbazbaz
-				li quxquxqux
-			.feedback.footer_column
-				li.title Feedback
-				li barbarbar
-				li foofoofoo
-				li bazbazbaz
-				li quxquxqux
-			.social.footer_column
-				li.title Follow Us
-				li sina
-				li renren
-				li facebook
-				li twitter
-			.rights
-				li Terms of Use
-				li Privacy Policy
-				li Site Map
-				li Get Support
-				li Contact Us
-				li.rights_content Copyright ©2013 Career Engine, Inc. All Rights Reserved.
+	footer.footer
+		.container
+			p.pull-left © 2013 Career Engine Corporation, All Rights Reserved. 
+			ul.footer-links.pull-right
+				li
+					a(href="about") 关于我们
+				li.muted ·
+				li
+					a(href="privacy") 用户协议
+				li.muted ·
+				li
+					a(href="careers") 加入我们

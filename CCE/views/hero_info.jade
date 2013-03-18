@@ -1,0 +1,13 @@
+extends static
+
+block content
+	#info-content.hero-unit
+		#hero_holder.container.big_corner
+			.title #{info.title}
+			hr
+			each sub_content in info.content
+				- if (sub_content.title!=undefined&&sub_content.title!="")
+					.sub-title #{sub_content.title}
+					p.content #{sub_content.content}
+				- else
+					p.content #{sub_content.content}
